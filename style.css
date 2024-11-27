@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Press+Start+2P&family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "Cascadia Code";
+    src: url("Cascadia.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+html{
+    background: white
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+#heading{
+    color: white;
+    background: rgb(79, 142, 232);
+    padding: 15px 1% 15px;
+    overflow: hidden;
+    display: flex;
+}
+#title{
+    font-family: Piazzolla;
+    font-size: 45px;
+    padding-left: 40px;
+}
+#subtitle{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: Pridi;
+    font-weight: 500;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+#subtitle1{
+    font-family: "Press Start 2P";
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%,0);
+}
+#navbar{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top:10px;
+    left: 70%;
+}
+.navbarLI{
+    display: inline;
+    float: left;
+    padding: 5px 20px 5px 20px
+}
+.navBtn{
+    font-family: Pridi;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    transition: 0.5s;
+}
+.navBtn:hover{
+    color: rgb(223, 252, 255);
+}
+
+#contents{
+    width: 75%;
+    height: 200px;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .3)), url('bg1.png');
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+#startBtn{
+    font-family: Piazzolla;
+    border: none;
+    color: #318CE7;
+    background-color: rgb(195,231,253);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 50px;
+        
+    padding: 15px 60px 15px 60px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+
+    font-size: 45px;
+        
+    cursor: pointer;
+
+    position: relative;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+}
+#type_title{
+    font-family: Piazzolla;
+    color: #87CEFA;
+    font-size: 100px;
+    text-align: center;
+
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+}
+
+#small_icons{
+    position: absolute;
+    top: var(--content_part);
+    
+    width: 100%;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: inline-flex;
+    margin-left: 7%;
+    justify-content: space-evenly;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#ic_1{
+    background-image: url("bg1_1.png");
+    transition: 0.3s;
+}
+#ic_2{
+    background-image: url("bg2_1.png");
+    transition: 0.3s;
+}
+#ic_3{
+    background-image: url("bg3_1.png");
+    transition: 0.3s;
+}
+
+:root{
+    --content_part: 0;
+    --screen_height: 0;
+    --small_icons_height: 0;
+
+    --startBtnX: 0;
+    --startBtnY: 0;
+    
+    --qrCodeX: 0;
+    --qrCodeY: 0;
+}
+
+
+
+/*STYLE PART IF THE SCREEN IS AROUND AN IPAD AIR OR SMALLER*/
+@media screen and (max-width:850px) {
+    html{
+        background: rgb(14,48,94);
+        background: linear-gradient(0deg, rgba(14,48,94,1) 2%, rgba(46,114,187,1) 78%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100dvh;
+    }
+    #heading{
+        background: none;
+        color: white/*rgb(79, 142, 232)*/;
+        padding: 0;
+        height: max-content;
+        overflow: hidden;
+    }
+    #title{
+        position: absolute;
+        font-size: 75px;
+        left: 50%;
+        transform: translate(-50%,0);
+        padding: 0;
+        margin-top: 40px;
+        
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+    }
+
+    #settings{
+        margin-left: 25px;
+        margin-top: 5px;
+        font-size: 30px;
+    }
+
+    #subtitle{
+        visibility: hidden;
+        overflow: hidden;
+    }
+    #subtitle1{
+        margin-top: 100px;
+        text-align: center;
+        font-family: Pridi;
+        font-weight: 500;
+        font-size: 20px;
+
+        position: absolute;
+        width: 100%;
+
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+    }
+    #contents{
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .3)), url('bg1_1.png');;
+        background-repeat: no-repeat;
+        height: 489px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        z-index: 2;
+        margin-top: 0px;
+
+        position: relative;        
+        top: 200px;
+    }
+    #startBtn{
+        font-family: Piazzolla;
+        border: none;
+        color: #318CE7;
+        background-color: #87CEFA;;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 50px;
+        
+        padding: 15px 60px 15px 60px;
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
+        font-family: Piazzolla;
+        font-size: 45px;
+        
+        cursor: pointer;
+
+        position: relative;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.2s;
+    }
+    #type_title{
+        font-size: 50px;
+        color: rgb(228, 249, 255);
+        transition: 0.5s;
+    }
+    
+    #btn_text{
+        text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+        text-align: center;
+    }
+    #small_icons{
+        z-index: 3;
+        background: rgb(14,48,94);
+        position: absolute;
+        top: var(--content_part);
+        height: var(--small_icons_height);
+        width: 100%;
+    }
+    .icon{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        display: inline-flex;
+        margin-left: 7%;
+        justify-content: space-evenly;
+        position: relative;
+        top: 50%;
+     
+        transform: translateY(-50%);
+    }
+    #ic_1{
+        background-image: url("bg1_1.png");
+        transition: 0.3s;
+        box-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
+    }
+    #ic_2{
+        background-image: url("bg2_1.png");
+        transition: 0.3s;
+    }
+    #ic_3{
+        background-image: url("bg3_1.png");
+        transition: 0.3s;
+    }
+    #navbar{
+        visibility: hidden;
+        overflow:hidden;
+    }
+
+    #settingsExit{
+        margin-left: 25px;
+        margin-top: 5px;
+        font-size: 30px;
+        color:white
+    }
+    #credits{
+        visibility:hidden;
+        overflow: hidden;
+        background: rgb(96, 162, 255);
+        border-radius: 100px;
+        transition: 0.9s;
+        width: 0px;
+        height: 100dvh;
+        z-index: 4;
+        
+        position: absolute;
+        top: -20px;
+        left: -20px;
+    }
+    #creditsTitle{
+        font-family: "Cascadia Code";
+        font-weight: 500;
+        font-size: 60px;
+        text-align: center;
+        color: white;
+        width: 100%;
+        transition: 0.3;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .members{
+        font-family: "Cascadia Code";
+        font-weight: 500;
+        font-size: 20px;
+        color: white;
+        word-spacing: 1.5;
+    }
+
+    #qr_codes{
+        visibility: hidden;
+        overflow: hidden;
+        background-color: rgb(243, 243, 243);
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        z-index: 5;
+        border-radius: 100px;
+
+        position: absolute;
+        top: var(--startBtnY);
+        left: var(--startBtnX);
+        color: white;
+        transition: 0.9s;
+    }
+    #LM_bg{
+        background-color: rgb(96, 162, 255);
+        width: 400px;
+        height: 400px;
+    }
+    #LM{
+        background: url("qr_codes/qr_learning_materials_resized.png");
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #qr_title{
+        font-family: "Cascadia Code";
+        font-size: 60px;
+        text-align: center;
+        font-weight: 500;
+        color: rgb(96, 162, 255);
+        position: relative;
+        top: -70px;
+    }
+    #qr_info{
+        font-family: "Cascadia Code";
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        color: rgb(96, 162, 255);
+        position: relative;
+        top: 280px;
+    }
+    #qr_code_exit{
+        position: absolute;
+        top: 10px;
+        left: 5px;
+    }
+    #BB_frame{
+        z-index: 6;
+    }
+}
